@@ -31,33 +31,45 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, sans-serif; }
         
-        /* СТИЛИ АДАПТИВНОГО ФОНА ДЛЯ МОБИЛЬНЫХ ТЕЛЕФОНОВ */
-                body { 
-            background-color: var(--bg-main) !important;
-            background-image: linear-gradient(rgba(240,253,250,0.55), rgba(240,253,250,0.55)), url('bg-air.png') !important;
-            background-attachment: fixed !important; /* Намертво приклеиваем фон к экрану */
-            background-position: right top !important; /* Прижимаем строго к верхнему правому углу */
-            background-size: cover !important; /* Насильно растягиваем картинку без потери пропорций */
-            background-repeat: no-repeat !important;
-            color: var(--text-main); 
-            line-height: 1.5; 
-            display: flex; 
-            justify-content: center; 
-        }
+        /* ИСПРАВЛЕННЫЙ БРОНЕБОЙНЫЙ БЛОК BODY С КОРОТКИМ ПУТЕМ ДЛЯ ФОНА */
+        body { 
+    /* Основной фоновый цвет - он мягко закроет всё пространство ниже картинки */
+    background-color: var(--bg-main) !important;
+    background-image: linear-gradient(rgba(240,253,250,0.55), rgba(240,253,250,0.55)), url('./bg-air.png') !important;
+    background-attachment: fixed !important; /* Картинка КРЕПКО ПРИЛИПАЕТ к экрану и не движется */
+    background-position: right top !important; /* Стоит строго в правом верхнем углу */
+    background-size: contain !important; /* Картинка сохраняет свой ИДЕАЛЬНЫЙ РОДНОЙ масштаб и не пикселит! */
+    background-repeat: no-repeat !important; /* Запрещаем ей размножаться */
+    color: var(--text-main); 
+    line-height: 1.5; 
+    display: flex; 
+    justify-content: center; 
+}
 
         
-        .container { width: 100%; max-width: 1200px; background: var(--container-bg); min-height: 100vh; padding: 20px 15px; border-left: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; box-shadow: 0 0 50px rgba(2,132,199,0.12); position: relative; backdrop-filter: blur(2px); }
+        .container { 
+    width: 100%; 
+    max-width: 1200px; 
+    background: var(--container-bg); 
+    min-height: 100vh; 
+    padding: 20px 15px; 
+    border-left: 1px solid #e2e8f0; 
+    border-right: 1px solid #e2e8f0; 
+    box-shadow: 0 0 50px rgba(2,132,199,0.12); 
+    position: relative; 
+    backdrop-filter: blur(2px); 
+}
+
         
         .brand-header { display: flex; flex-direction: column; gap: 15px; justify-content: space-between; align-items: center; padding: 15px 5px 25px; border-bottom: 2px solid var(--sky-light); margin-bottom: 25px; }
         .logo-group { display: flex; align-items: center; gap: 18px; text-align: left; }
         
-        /* БЕЗУПРЕЧНЫЙ КРУГЛЫЙ ЛОГОТИП — СКРЫВАЕТ КВАДРАТНЫЙ БЕЛЫЙ ОРЕОЛ ИЗ ФАЙЛА */
-        .main-logo-img { 
+        .air-logo-circle { 
             width: 75px !important; 
             height: 75px !important; 
             object-fit: cover !important; 
             border: 2px solid var(--sky-light) !important;
-            border-radius: 50% !important; /* Насильно срезает любые углы картинки в идеальный круг */
+            border-radius: 50% !important;
             box-shadow: 0 4px 15px rgba(2, 132, 199, 0.1), 0 0 10px rgba(255, 255, 255, 0.9) !important;
             background-color: #ffffff !important;
             display: block !important;
@@ -104,19 +116,7 @@
         .card-h { font-size: 17px; font-weight: bold; color: var(--accent-blue); margin-bottom: 12px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 8px; }
         .card-p { color: var(--text-main); font-size: 14px; line-height: 1.6; }
         
-        .bullet-list { list-style: none; padding-left: 0; color: var(--text-main); font-size: 14.5px; margin-bottom: 15px; }
-        .bullet-list li { position: relative; padding-left: 26px; margin-bottom: 10px; line-height: 1.5; }
-        .bullet-list li::before { content: "✓"; position: absolute; left: 2px; top: 0px; color: var(--accent-blue); font-weight: 900; font-size: 16px; }
-        
-        .sticky-phone-btn { position: fixed; bottom: 30px; right: 30px; width: 64px; height: 64px; background-color: var(--accent-green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; text-decoration: none; box-shadow: 0 8px 25px rgba(22,163,74,0.4); z-index: 9999; animation: pulseSticky 2s infinite; }
-        @keyframes pulseSticky {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22,163,74,0.6); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(22,163,74,0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22,163,74,0); }
-        }
-        
-        /* БРОНЕБОЙНОЕ РАСТЯЖЕНИЕ И ФИКСАЦИЯ ФОНА НА МОНИТОРАХ ПК */
-                @media (min-width: 768px) {
+        @media (min-width: 768px) {
             .container { padding: 25px 30px; }
             .brand-header { flex-direction: row; padding: 20px 10px 30px; }
             .brand-logo { font-size: 24px; }
@@ -133,12 +133,11 @@
 </head>
 <body>
 
-<a href="tel:+79372115128" class="sticky-phone-btn" title="Позвонить мастеру">📞</a>
 
 <div class="container">
     <div class="brand-header">
         <div class="logo-group">
-            <img src="logo-air.png" alt="Логотип" class="main-logo-img">
+            <img src="logo-air.png" alt="Логотип" class="air-logo-circle">
             <div class="brand-logo">❄️ Климат <br><span>Под Ключ</span></div>
         </div>
         <div class="header-action-block">
@@ -297,5 +296,20 @@
         }
     }
 </script>
+<a href="tel:+79372115128" style="position: fixed !important; bottom: 30px !important; right: 30px !important; width: 64px !important; height: 64px !important; background-color: #16a34a !important; color: white !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; font-size: 28px !important; text-decoration: none !important; box-shadow: 0 8px 25px rgba(22,163,74,0.5) !important; z-index: 999999 !important; -webkit-animation: stickyPulseAnim 2s infinite !important; animation: stickyPulseAnim 2s infinite !important;" title="Позвонить мастеру">📞</a>
+
+<style>
+@keyframes stickyPulseAnim {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22,163,74,0.7); }
+    70% { transform: scale(1.06); box-shadow: 0 0 0 15px rgba(22,163,74,0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22,163,74,0); }
+}
+@-webkit-keyframes stickyPulseAnim {
+    0% { -webkit-transform: scale(1); box-shadow: 0 0 0 0 rgba(22,163,74,0.7); }
+    70% { -webkit-transform: scale(1.06); box-shadow: 0 0 0 15px rgba(22,163,74,0); }
+    100% { -webkit-transform: scale(1); box-shadow: 0 0 0 0 rgba(22,163,74,0); }
+}
+</style>
+
 </body>
 </html>
