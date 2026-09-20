@@ -32,18 +32,19 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, sans-serif; }
         
         /* СТИЛИ АДАПТИВНОГО ФОНА ДЛЯ МОБИЛЬНЫХ ТЕЛЕФОНОВ */
-        body { 
-            background-color: var(--bg-main);
-            background-image: linear-gradient(rgba(240,253,250,0.55), rgba(240,253,250,0.55)), url('bg-air.png');
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: right 25% center;
-            background-repeat: no-repeat;
+                body { 
+            background-color: var(--bg-main) !important;
+            background-image: linear-gradient(rgba(240,253,250,0.55), rgba(240,253,250,0.55)), url('bg-air.png') !important;
+            background-attachment: fixed !important; /* Намертво приклеиваем фон к экрану */
+            background-position: right top !important; /* Прижимаем строго к верхнему правому углу */
+            background-size: cover !important; /* Насильно растягиваем картинку без потери пропорций */
+            background-repeat: no-repeat !important;
             color: var(--text-main); 
             line-height: 1.5; 
             display: flex; 
             justify-content: center; 
         }
+
         
         .container { width: 100%; max-width: 1200px; background: var(--container-bg); min-height: 100vh; padding: 20px 15px; border-left: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; box-shadow: 0 0 50px rgba(2,132,199,0.12); position: relative; backdrop-filter: blur(2px); }
         
@@ -115,13 +116,7 @@
         }
         
         /* БРОНЕБОЙНОЕ РАСТЯЖЕНИЕ И ФИКСАЦИЯ ФОНА НА МОНИТОРАХ ПК */
-        @media (min-width: 768px) {
-            body { 
-                background-image: linear-gradient(to right, var(--bg-main) 20%, rgba(240,253,250,0.45) 55%, rgba(240,253,250,0.05) 100%), url('bg-air.png') !important;
-                background-position: right top !important;
-                background-size: cover !important; /* Намертво растягивает фон по высоте без серой обрезки */
-                background-repeat: no-repeat !important;
-            }
+                @media (min-width: 768px) {
             .container { padding: 25px 30px; }
             .brand-header { flex-direction: row; padding: 20px 10px 30px; }
             .brand-logo { font-size: 24px; }
