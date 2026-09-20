@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Климат Под Ключ — Монтаж, заправка и чистка кондиционеров в Тольятти</title>
+    
+    <!-- ОФИЦИАЛЬНЫЙ КОД СЧЕТЧИКА ЯНДЕКС.МЕТРИКИ -->
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < t.length; j++) {if (t[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t),k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://yandex.ru", "ym");
+       ym(111611223, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+    </script>
+    <noscript><div><img src="https://yandex.ru" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+    <style>
+        :root {
+            --bg-main: #f0fdfa;
+            --container-bg: rgba(255, 255, 255, 0.96);
+            --card-bg: #f8fafc;
+            --accent-blue: #0284c7;
+            --sky-light: #e0f2fe;
+            --accent-green: #16a34a;
+            --accent-orange: #f97316;
+            --text-main: #1e293b;
+            --text-gray: #64748b;
+            --danger: #ef4444;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, sans-serif; }
+        
+        /* СТИЛИ АДАПТИВНОГО ФОНА ДЛЯ МОБИЛЬНЫХ ТЕЛЕФОНОВ */
+        body { 
+            background-color: var(--bg-main);
+            background-image: linear-gradient(rgba(240,253,250,0.55), rgba(240,253,250,0.55)), url('bg-air.png');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: right 25% center;
+            background-repeat: no-repeat;
+            color: var(--text-main); 
+            line-height: 1.5; 
+            display: flex; 
+            justify-content: center; 
+        }
+        
+        .container { width: 100%; max-width: 1200px; background: var(--container-bg); min-height: 100vh; padding: 20px 15px; border-left: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; box-shadow: 0 0 50px rgba(2,132,199,0.12); position: relative; backdrop-filter: blur(2px); }
+        
+        .brand-header { display: flex; flex-direction: column; gap: 15px; justify-content: space-between; align-items: center; padding: 15px 5px 25px; border-bottom: 2px solid var(--sky-light); margin-bottom: 25px; }
+        .logo-group { display: flex; align-items: center; gap: 18px; text-align: left; }
+        
+        /* БЕЗУПРЕЧНЫЙ КРУГЛЫЙ ЛОГОТИП — СКРЫВАЕТ КВАДРАТНЫЙ БЕЛЫЙ ОРЕОЛ ИЗ ФАЙЛА */
+        .main-logo-img { 
+            width: 75px !important; 
+            height: 75px !important; 
+            object-fit: cover !important; 
+            border: 2px solid var(--sky-light) !important;
+            border-radius: 50% !important; /* Насильно срезает любые углы картинки в идеальный круг */
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.1), 0 0 10px rgba(255, 255, 255, 0.9) !important;
+            background-color: #ffffff !important;
+            display: block !important;
+        }
+        .brand-logo { font-size: 22px; font-weight: 900; color: var(--text-main); letter-spacing: 0.5px; text-transform: uppercase; line-height: 1.1; }
+        .brand-logo span { color: var(--accent-blue); }
+        
+        .header-action-block { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+        .brand-phone { color: var(--accent-green); font-size: 18px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+        
+        .orange-call-btn { display: inline-block; background: linear-gradient(135deg, #f97316, #ea580c); color: #fff; text-decoration: none; padding: 10px 22px; border-radius: 6px; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; border: none; box-shadow: 0 4px 15px rgba(234,88,12,0.3); transition: all 0.2s ease; cursor: pointer; text-align: center; }
+        .orange-call-btn:hover { background: linear-gradient(135deg, #ea580c, #ca8a04); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(234,88,12,0.4); }
+        
+        header { text-align: center; padding-bottom: 35px; border-bottom: 1px dashed #cbd5e1; }
+        h1 { font-size: 24px; font-weight: 800; color: var(--text-main); line-height: 1.3; text-transform: uppercase; margin-bottom: 15px; }
+        h1 span { color: var(--accent-blue); }
+        .utp-lead { color: var(--text-gray); font-size: 15px; max-width: 800px; margin: 0 auto 25px; line-height: 1.6; }
+        
+        .triggers { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+        .trigger-tag { background: var(--sky-light); border: 1px solid var(--accent-blue); color: var(--accent-blue); padding: 8px 16px; border-radius: 30px; font-size: 12px; font-weight: bold; }
+        
+        .section { margin-top: 45px; }
+        .section-title { font-size: 18px; color: var(--accent-blue); font-weight: 700; margin: 45px 0 20px; text-transform: uppercase; border-left: 4px solid var(--accent-blue); padding-left: 12px; }
+        
+        .tabs-nav { display: flex; flex-direction: column; gap: 10px; margin: 30px 0; }
+        .tab-btn { background: var(--card-bg); border: 1px solid #cbd5e1; color: var(--text-main); padding: 15px; border-radius: 8px; font-size: 15px; font-weight: bold; cursor: pointer; text-align: center; transition: all 0.2s; }
+        .tab-btn.active { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); box-shadow: 0 6px 20px rgba(2,132,199,0.3); }
+        .tab-content { display: none; background: #fff; border: 1px solid var(--sky-light); padding: 20px; border-radius: 12px; text-align: left; margin-bottom: 35px; }
+        .tab-content.active { display: block; }
+        
+        .grid-tab-boxes { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        
+        .price-item { background: var(--card-bg); border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+        .price-header { display: flex; justify-content: space-between; align-items: center; padding: 18px; gap: 10px; }
+        .price-title { font-weight: bold; font-size: 15px; color: var(--text-main); line-height: 1.4; }
+        .price-val { color: var(--accent-green); font-weight: 900; font-size: 21px; white-space: nowrap; }
+        
+        .spoiler-btn { background: none; border: none; color: var(--accent-blue); cursor: pointer; font-size: 13px; font-weight: bold; margin-top: 8px; display: block; padding: 0; text-align: left; }
+        .spoiler-body { max-height: 0; overflow: hidden; padding: 0 18px; color: var(--text-gray); font-size: 13.5px; transition: all 0.2s ease-out; }
+        .price-item.open .spoiler-body { max-height: 2000px; padding: 18px; border-top: 1px solid #e2e8f0; background: #fff; }
+        
+        .card { background: var(--card-bg); border: 1px solid #e2e8f0; padding: 22px; border-radius: 12px; text-align: left; height: 100%; }
+        .card-h { font-size: 17px; font-weight: bold; color: var(--accent-blue); margin-bottom: 12px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 8px; }
+        .card-p { color: var(--text-main); font-size: 14px; line-height: 1.6; }
+        
+        .bullet-list { list-style: none; padding-left: 0; color: var(--text-main); font-size: 14.5px; margin-bottom: 15px; }
+        .bullet-list li { position: relative; padding-left: 26px; margin-bottom: 10px; line-height: 1.5; }
+        .bullet-list li::before { content: "✓"; position: absolute; left: 2px; top: 0px; color: var(--accent-blue); font-weight: 900; font-size: 16px; }
+        
+        .sticky-phone-btn { position: fixed; bottom: 30px; right: 30px; width: 64px; height: 64px; background-color: var(--accent-green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; text-decoration: none; box-shadow: 0 8px 25px rgba(22,163,74,0.4); z-index: 9999; animation: pulseSticky 2s infinite; }
+        @keyframes pulseSticky {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22,163,74,0.6); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(22,163,74,0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22,163,74,0); }
+        }
+        
+        /* БРОНЕБОЙНОЕ РАСТЯЖЕНИЕ И ФИКСАЦИЯ ФОНА НА МОНИТОРАХ ПК */
+        @media (min-width: 768px) {
+            body { 
+                background-image: linear-gradient(to right, var(--bg-main) 20%, rgba(240,253,250,0.45) 55%, rgba(240,253,250,0.05) 100%), url('bg-air.png') !important;
+                background-position: right top !important;
+                background-size: cover !important; /* Намертво растягивает фон по высоте без серой обрезки */
+                background-repeat: no-repeat !important;
+            }
+            .container { padding: 25px 30px; }
+            .brand-header { flex-direction: row; padding: 20px 10px 30px; }
+            .brand-logo { font-size: 24px; }
+            .header-action-block { align-items: flex-end; }
+            .brand-phone { font-size: 20px; }
+            h1 { font-size: 36px; margin-bottom: 20px; }
+            .utp-lead { font-size: 16px; margin-bottom: 30px; }
+            .tabs-nav { flex-direction: row; gap: 15px; }
+            .tab-btn { flex: 1; font-size: 16px; padding: 18px; }
+            #tab-2 .grid-tab-boxes, #tab-3 .grid-tab-boxes { grid-template-columns: 1fr 1fr; gap: 20px; }
+            .grid-3 { grid-template-columns: 1fr 1fr 1fr; gap: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+<a href="tel:+79372115128" class="sticky-phone-btn" title="Позвонить мастеру">📞</a>
+
+<div class="container">
+    <div class="brand-header">
+        <div class="logo-group">
+            <img src="logo-air.png" alt="Логотип" class="main-logo-img">
+            <div class="brand-logo">❄️ Климат <br><span>Под Ключ</span></div>
+        </div>
+        <div class="header-action-block">
+            <a href="tel:+79372115128" class="brand-phone">📞 +7 (937) 211-51-28</a>
+            <a href="tel:+79372115128" class="orange-call-btn">Вызвать мастера</a>
+        </div>
+    </div>
+    <header>
+        <h1>Монтаж и обслуживание <span>климатической техники</span></h1>
+        <p class="utp-lead">Профессиональная установка, заправка и чистка сплит-систем в Тольятти, Ягодном, Тимофеевке, Подстепках и по всей Самарской области. Чистая работа без строительной пыли за 3 часа с жесткой гарантией по договору.</p>
+        <div class="triggers">
+            <span class="trigger-tag">Выезд инженера сегодня — 0 ₽</span>
+            <span class="trigger-tag">Без предоплаты</span>
+            <span class="trigger-tag">Скрытые доплаты заблокированы</span>
+        </div>
+    </header>
+
+    <div class="tabs-nav">
+        <button class="tab-btn active" onclick="switchTab(1)">📐 1. Замер помещения</button>
+        <button class="tab-btn" onclick="switchTab(2)">🛠️ 2. Установка сплит-систем</button>
+        <button class="tab-btn" onclick="switchTab(3)">💬 3. Общие вопросы</button>
+    </div>
+
+    <!-- ТАБ 1 -->
+    <div class="tab-content active" id="tab-1">
+        <h3 style="color:var(--accent-blue); margin-bottom:10px; font-size:18px; font-weight:bold;">Выездной инженерный расчет площади</h3>
+        <p style="font-size:16px; margin-bottom:15px; color:var(--text-main);">• Стоимость замера для 1 сплит-системы: <strong style="color:var(--accent-green); font-size:22px;">от 500 ₽</strong><br>• Стоимость замера от 2-х единиц техники: <strong style="color:var(--accent-green); font-size:22px;">800 ₽</strong></p>
+        <h4 style="color:var(--text-main); margin-bottom:10px; font-size:14px; text-transform:uppercase; font-weight:bold;">Что входит в услугу:</h4>
+        <ul class="bullet-list">
+            <li>В одну услугу входит полный инженерный расчет параметров для одной классической сплит-системы или одной мультисплит-системы.</li>
+            <li>Итоговый расчет стоимости монтажных работ производится строго по количеству внешних блоков.</li>
+            <li>В случае потребности в замере более одной сплит-системы, расчет стоимости услуги будет произведен по количеству уличных внешних блоков.</li>
+        </ul>
+    </div>
+
+    <!-- ТАБ 2 -->
+    <div class="tab-content" id="tab-2">
+        <h3 style="color:var(--accent-blue); margin-bottom:15px; font-size:17px; font-weight:bold;">Цены на профессиональный монтаж оборудования:</h3>
+        <div class="grid-tab-boxes">
+            <div class="price-item" id="pi-1">
+                <div class="price-header"><div><div class="price-title">Установка сплит-системы 7-9 kBTU</div><button class="spoiler-btn" onclick="toggleSpoiler('pi-1')">Подробнее ↓</button></div><div class="price-val">9 700 ₽</div></div>
+                <div class="spoiler-body"></div>
+            </div>
+            <div class="price-item" id="pi-2">
+                <div class="price-header"><div><div class="price-title">Установка сплит-системы 12 kBTU</div><button class="spoiler-btn" onclick="toggleSpoiler('pi-2')">Подробнее ↓</button></div><div class="price-val">11 300 ₽</div></div>
+                <div class="spoiler-body"></div>
+            </div>
+            <div class="price-item" id="pi-3">
+                <div class="price-header"><div><div class="price-title">Установка сплит-системы 18 kBTU</div><button class="spoiler-btn" onclick="toggleSpoiler('pi-3')">Подробнее ↓</button></div><div class="price-val">12 800 ₽</div></div>
+                <div class="spoiler-body"></div>
+            </div>
+            <div class="price-item" id="pi-4">
+                <div class="price-header"><div><div class="price-title">Установка сплит-системы 24 kBTU</div><button class="spoiler-btn" onclick="toggleSpoiler('pi-4')">Подробнее ↓</button></div><div class="price-val">16 400 ₽</div></div>
+                <div class="spoiler-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ТАБ 3 -->
+    <div class="tab-content" id="tab-3">
+        <div class="grid-tab-boxes">
+            <div class="price-item" id="fq-1">
+                <div class="price-header"><div class="price-title">Зачем регулярно чистить кондиционер?</div><button class="spoiler-btn" onclick="toggleSpoiler('fq-1')">Развернуть ответ ↓</button></div>
+                <div class="spoiler-body"><p>Внутри сплит-системы при работе образуется влага. Это идеальная теплица для грибков и плесени. Самая опасная из них — бактерия Легионелла, которая вызывает острую легочную инфекцию (пневмонию). Регулярная очистка и дезинфекция полностью уничтожают микробы, убирают неприятный запах и спасают ваши легкие.</p></div>
+            </div>
+            <div class="price-item" id="fq-2">
+                <div class="price-header"><div class="price-title">Зачем кондиционеру нужна регулярная дозаправка фреоном?</div><button class="spoiler-btn" onclick="toggleSpoiler('fq-2')">Развернуть ответ ↓</button></div>
+                <div class="spoiler-body"><p>Физически фреон испаряется через микроскопические резьбовые соединения медных трубок со скоростью до 8% в год. Это естественный процесс. Если не делать дозаправку фреоном, уровень газа упадет ниже нормы: кондиционер перестанет охлаждать, компрессор начнет перегреваться и намертво заклинит.</p></div>
+            </div>
+            <div class="price-item" id="fq-3">
+                <div class="price-header"><div class="price-title">Как правильно выбрать и подобрать кондиционер?</div><button class="spoiler-btn" onclick="toggleSpoiler('fq-3')">Развернуть ответ ↓</button></div>
+                <div class="spoiler-body"><p>Расчет идет по площади: для небольших комнат до 20 кв.м подходит модель мощностью 07 (7 kBTU), до 25 кв.м — модель 09, до 35 кв.м — индекс 12. Если окна выходят на южную солнечную сторону или в комнате много бытовой техники, мощность сплит-системы всегда подбирается с запасом на один шаг.</p></div>
+            </div>
+            <div class="price-item" id="fq-4">
+                <div class="price-header"><div class="price-title">Как часто нужно проводить сервисное обслуживание кондиционера?</div><button class="spoiler-btn" onclick="toggleSpoiler('fq-4')">Развернуть ответ ↓</button></div>
+                <div class="spoiler-body"><p>В обычных жилых квартирах Самарской области комплексную чистку и проверку давления газов достаточно делать 1 раз в год (весной перед началом жары). Для офисов, магазинов и ресторанов обслуживание проводится чаще — каждые 3–6 месяцев из-за повышенной запыленности.</p></div>
+            </div>
+        </div>
+    </div>
+    <!-- НАПРАВЛЕНИЯ РАБОТЫ -->
+    <section class="section">
+        <h2 class="section-title">Направления работы компании Климат Под Ключ</h2>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-h">📦 Подбор оборудования</div>
+                <p class="card-p">Вам не нужно искать технику самостоятельно. Приедем, измерим комнату, учтем солнечную сторону и привезем кондиционер напрямую со склада дилеров по оптовой цене.</p>
+            </div>
+            <div class="card">
+                <div class="card-h">🛠️ Чистый монтаж</div>
+                <p class="card-p"><strong>Стандартный (3м трассы):</strong> Одно отверстие, установка под окно. <br><br><strong>Во время ремонта:</strong> Закладка трассы в стену на первом этапе, навеска блоков на втором.</p>
+            </div>
+            <div class="card">
+                <div class="card-h">🧽 Сервисный уход</div>
+                <p class="card-p">Профессиональное устранение запахов и бактерий. Полный комплекс: антибактериальная обработка, чистка парогенератором, мойка внешнего блока и дозаправка фреоном.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- УНИКАЛЬНЫЙ НИЖНИЙ БЛОК -->
+    <section style="text-align: left; border-top: 1px dashed #cbd5e1; padding-top: 30px;">
+        <h2 class="section-title" style="margin-top:0;">Нужно установить кондиционер, но не знаете с чего начать?</h2>
+        <p style="color:var(--text-gray); font-size:14.5px; margin-bottom:20px; line-height:1.6;">Мы рады предложить вам качественные услуги по монтажу кондиционеров под ключ. Опытные специалисты компании «Климат Под Ключ» полностью закроют любые задачи по подбору, доставке и установке климатических систем любой сложности в один или два этапа.</p>
+        
+        <h4 style="color:var(--text-main); margin-bottom:10px; font-size:15px; font-weight:bold;">Наши преимущества:</h4>
+        <ul class="bullet-list">
+            <li><strong>Проверенные специалисты:</strong> Опытные монтажники со стажем работы более 7 лет.</li>
+            <li><strong>Работа по договору:</strong> Официальные обязательства, фиксированная цена.</li>
+            <li><strong>Капитальная гарантия:</strong> Гарантия на монтаж, герметичность трассы и качество вальцовки — до 3 лет!</li>
+        </ul>
+
+        <h3 class="section-title">Состав выполняемых работ:</h3>
+        <p style="font-size:15px; margin-bottom:10px; font-weight:bold;">Одноэтапный монтаж (Установка в готовый ремонт за 1 день):</p>
+        <ul class="bullet-list">
+            <li>Навеска уличного блока на кронштейны под окно здания без использования альпинистов.</li>
+            <li>Бурение 1 отверстия в стене до 60 см и диаметром до 50 мм. Прокладка магистрали до 3-х метров.</li>
+            <li>Герметизация отверстия пеной, вакуумация трассы кондиционера, пусконаладка и демонстрация работы.</li>
+            <li>Уборка крупного мусора. В комплект входят медные трубки, теплоизоляция, обмотка, кронштейны, кабель-канал 16*16 (до 2м), кабель-канал 60*60 (0.5м) и крепеж.</li>
+        </ul>
+
+        <p style="font-size:15px; margin-bottom:10px; font-weight:bold;">Двухэтапный монтаж (В процессе ремонта помещения):</p>
+        <p style="color:var(--text-main); font-size:14px; margin-bottom:8px; padding-left:15px;"><strong>Первый этап установки:</strong> Прокладка фреоновой трассы до 3 метров в готовую штробу, бурение сквозного отверстия, герметизация пеной и временная консервация выходов изолентой.</p>
+        <p style="color:var(--text-main); font-size:14px; margin-bottom:20px; padding-left:15px;"><strong>Второй этап установки:</strong> Навеска блоков на чистые обои, подключение к скрытой трассе, замер уровня фреона, вакуумирование и запуск.</p>
+    </section>
+
+    <div style="text-align:center; margin-top:35px; padding-bottom:30px;">
+        <a href="tel:+79372115128" class="orange-call-btn" style="font-size:17px; padding:15px 40px;">Вызвать инженера напрямую</a>
+    </div>
+
+    <footer><p>© 2026 Климат Под Ключ. Все права защищены. Профессиональный сервис в Самарской области.</p></footer>
+</div>
+
+<script>
+    const detailedText = `
+        <h5 style="color:var(--accent-blue); margin-bottom:6px; font-weight:bold;">В стоимость услуги полностью включено:</h5>
+        <p style="margin-bottom:8px; color:var(--text-main);"><strong>Состав услуги:</strong> Сверление 1 отверстия в стене до 60 см. Прокладка фреоновой магистрали до 3-х метров. Установка внешнего блока на кронштейны под окно, подключение. Установка внутреннего блока. Проверка уровня фреона, замер температуры. Обязательная вакуумация трассы, герметизация отверстия монтажной пеной, пусконаладка. Уборка мусора.</p>
+        <p style="color:var(--text-main);"><strong>Расходные материалы:</strong> Дренажный шланг, эл. кабель, медные трубки, теплоизоляция, обмотка для магистрали до 3-х метров, монтажная пена, уличный кронштейн (2 шт), кабель-канал 16*16 до 2-х метров, кабель-канал 60*60 0,5 метра и крепеж.</p>
+    `;
+    document.querySelectorAll('#tab-2 .spoiler-body').forEach(body => { body.innerHTML = detailedText; });
+
+    function switchTab(tabNum) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+        document.getElementById('tab-' + tabNum).classList.add('active');
+    }
+
+    function toggleSpoiler(itemId) {
+        const item = document.getElementById(itemId);
+        const btn = item.querySelector('.spoiler-btn');
+        item.classList.toggle('open');
+        if (item.classList.contains('open')) {
+            btn.innerText = 'Свернуть ↑'; btn.style.color = 'var(--danger)';
+        } else {
+            btn.innerText = itemId.startsWith('fq') ? 'Развернуть ответ ↓' : 'Подробнее ↓';
+            btn.style.color = 'var(--accent-blue)';
+        }
+    }
+</script>
+</body>
+</html>
